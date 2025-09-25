@@ -41,7 +41,10 @@ async function messageHandler(event) {
                 await playAiMove();
             }
             break;
-        case "INSERT_END":
+        case "GAME_END":
+            if (document.getElementById("autorestart").checked) {
+                setTimeout(restartGame, 500);
+            }
             break;
         case "INSERT_PLY":
             break;
@@ -100,4 +103,9 @@ async function startGame() {
 
 async function resetGame() {
     document.querySelector(".overlay").style.display = "flex";
+}
+
+// Reset the game and start again with same settings
+async function restartGame() {
+    startGame();
 }
