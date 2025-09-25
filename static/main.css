@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.overlay-body {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.game-options > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.game-options > input[type=button] {
+    width: 100%;
+}
+
+.game-options fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #efefef;
+    gap: 0.3rem;
+    max-width: 200px;
+    flex-wrap: wrap;
+}
+
+.game-options label:has(> input[type=radio]) {
+    background-color: #efefef;
+    padding: 0.2rem 0.3rem;
+    text-align: center;
+    border-radius: 0.2rem;
+
+    &:has(> input[type=radio]:checked) {
+        background-color: #cfcfff;
+    }
+    
+    &>input[type=radio] {
+        appearance: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.topbar {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
