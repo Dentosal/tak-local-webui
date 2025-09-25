@@ -29,7 +29,7 @@ struct Args {
     check: bool,
 
     /// Enginelist file, one per file
-    #[arg(short='F', long)]
+    #[arg(short = 'F', long)]
     enginelist: Option<PathBuf>,
 
     /// Engines to load (added to enginelist if any)
@@ -127,7 +127,7 @@ async fn main() {
                 .expect("Unable to read enginelist file")
                 .lines()
                 .map(|line| line.trim().to_owned())
-                .filter(|line| !line.is_empty() && !line.starts_with('#'))
+                .filter(|line| !line.is_empty() && !line.starts_with('#')),
         );
     }
 

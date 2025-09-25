@@ -17,3 +17,9 @@ To get some engines, you can run
 python3 build_engines.py
 ./target/release/tak-bot-webui -F enginelist.txt
 ```
+
+The navigate to `http://localhost:3000` in your browser.
+
+## License
+
+MIT. See [LICENSE](./LICENSE) for details.

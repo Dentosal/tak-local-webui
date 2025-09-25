@@ -50,8 +50,10 @@ def pull_and_build_engine(repo_url, build_cmd, run_cmds):
         assert (
             ENGINES / name / bin_path
         ).exists(), f"Build failed for {name}, {bin_path!r} not found"
-        
-        yield (name_override + "=" if name_override else "") + str(ENGINES / name) + "/" + run_cmd
+
+        yield (name_override + "=" if name_override else "") + str(
+            ENGINES / name
+        ) + "/" + run_cmd
 
 
 results = [run_cmd for args in ENGINE_REPOS for run_cmd in pull_and_build_engine(*args)]
