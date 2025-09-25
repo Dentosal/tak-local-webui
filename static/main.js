@@ -91,8 +91,13 @@ async function startGame() {
         return;
     }
     let boardSize = document.querySelector("input[name=opt-board-size]:checked").value;
+    sendAction("SET_CURRENT_PTN", '[Size "' + boardSize + '"]\n\n');
     playingAs = pickedColor === 'white' ? 1 : 2;
     sendAction("SET_PLAYER", playingAs);
     document.querySelector(".overlay").style.display = "none";
     updateUI();
+}
+
+async function resetGame() {
+    document.querySelector(".overlay").style.display = "flex";
 }
