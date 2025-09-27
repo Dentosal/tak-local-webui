@@ -79,3 +79,15 @@ body, html {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.spoiler {
+    min-width: 200px;
+    padding: 0.2rem 0.5rem;
+    background-color: #333;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+.spoiler:hover {
+    color: white;
+}

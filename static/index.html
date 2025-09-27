@@ -35,6 +35,10 @@
                     <label><input type="radio" name="opt-board-size" value="8">8x8</label>
                 </fieldset>
             </div>
+            <div>
+                <span>Training mode</span>
+                <input type="checkbox" id="opt-training-mode">
+            </div>
             <input type="button" value="Start" onclick="startGame()"/>
         </div>
         <div class="empty-spacer"></div>
@@ -44,6 +48,10 @@
         <div class="topbar">
             <div>
                 AI: <span id="ai-state">idle</span>
+            </div>
+            <div id="analysis">
+                <span id="analysis-score"></span>
+                <span id="analysis-text"></span>
             </div>
             <div>
                 <button onclick="resetGame()">New game</button>
